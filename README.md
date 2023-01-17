@@ -1,12 +1,5 @@
 ## SYSTEM RUN gRPC
 
-[[_TOC_]]
-
----
-
-:scroll: **START**
-
-
 ### Introduction
 
 SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control your remote sever machine
@@ -18,7 +11,7 @@ SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control y
  - Execute remote command on the server machine
  - Open a url on default browser of the server machine
 
- #### - OS SUPPORTED
+#### - OS SUPPORTED
     - Windows 8,10,11
 
 #### - HOW TO USE
@@ -67,5 +60,4 @@ SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control y
 	}
 	log.Printf("%v", executeShutdown)
 
----
-:scroll: **END**
+
