@@ -12,21 +12,21 @@ SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control y
  - Open a url on default browser of the server machine
 
 #### - OS SUPPORTED
-    - Windows 8,10,11
+ - Windows 8,10,11
 
 #### - HOW TO USE
-    - Make sure server is running
-    - Run client in the ```client``` folder
+ - Make sure server is running
+ - Run client in the ```client``` folder
 
 
 #### - CLIENT
-
-	//terminate or kill a process on the server machine
-	terminateProcess, err := client.TerminateProcess(context.Background(), &pb.TerminateProcessRequest{ProcessName: "notepad.exe"})
-	if err != nil {
-		log.Fatalf("%v", err)
-	}
-	log.Printf("%v", terminateProcess)
+```
+    //terminate or kill a process on the server machine
+    terminateProcess, err := client.TerminateProcess(context.Background(), &pb.TerminateProcessRequest{ProcessName: "notepad.exe"})
+    if err != nil {
+        log.Fatalf("%v", err)
+    }
+    log.Printf("%v", terminateProcess)
 
 
 	//runs executable file on the server machine
@@ -59,5 +59,6 @@ SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control y
 		log.Fatalf("%v", err)
 	}
 	log.Printf("%v", executeShutdown)
+```
 
 
