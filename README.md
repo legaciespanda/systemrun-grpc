@@ -28,7 +28,6 @@ SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control y
 
 #### - CLIENT
 
-    ``` 
 	//terminate or kill a process on the server machine
 	terminateProcess, err := client.TerminateProcess(context.Background(), &pb.TerminateProcessRequest{ProcessName: "notepad.exe"})
 	if err != nil {
@@ -67,6 +66,6 @@ SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control y
 		log.Fatalf("%v", err)
 	}
 	log.Printf("%v", executeShutdown)
-    ```
+
 ---
 :scroll: **END**
