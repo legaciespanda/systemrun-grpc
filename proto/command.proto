@@ -1,0 +1,66 @@
+/*
+Copyright © 2023 Ernest Obot <ernestobot.dev@gmail.com>
+
+*/
+
+syntax = "proto3";
+
+option go_package = "./pb";
+
+package command;
+
+service Command {
+    //runs executable file on the server machine
+    rpc RunExecutableFile (RunExecutableRequest) returns (RunExecutableReply) {}
+    
+    //shutsdown a the remote server machine
+    rpc ShutdownSytem (ShutdownSytemRequest) returns (ShutdownSytemReply) {}
+
+    //terminate or kill a process on the server machine
+    rpc TerminateProcess (TerminateProcessRequest) returns (TerminateProcessReply) {}
+
+    //execute remote command on the server machine
+    rpc ExecuteRemoteCommand (RemoteCommandRequest) returns (RemoteCommandReply) {}
+
+    //open a url on default browser of the server machine
+    rpc LaunchUrl (LaunchUrlRequest) returns (LaunchUrlReply) {}
+}
+
+message RunExecutableRequest{
+    string file_name = 1;
+}
+message RunExecutableReply{
+    string message = 1;
+}
+
+message ShutdownSytemRequest{
+    string command = 1;
+}
+message ShutdownSytemReply{
+    string message = 1;
+}
+
+message TerminateProcessRequest{
+    string process_name = 1;
+}
+message TerminateProcessReply{
+    string message = 1;
+}
+
+message RemoteCommandRequest{
+    string command = 1;
+}
+message RemoteCommandReply{
+    string message = 1;
+}
+
+message LaunchUrlRequest{
+    string url = 1;
+}
+message LaunchUrlReply{
+    string message = 1;
+}
+
+
+
+
