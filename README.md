@@ -1,15 +1,21 @@
-## SYSTEM RUN gRPC
+## SystemRun gRPC
 
 ### Introduction
 
-SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control your remote sever machine
+SystemRun gRPC is a GO unary gRPC that allows a client exexcute commands, administrative tasks and control the remote gRPC sever machine
+
+#### - OBJECTIVE
+Assuming the client runs on another machine and the server runs on a different machine.
+
+The client can remotely perform some administrative task on the server machine provided, the client
+is connected to the gRPC server.
 
 #### - FEATURES
- - Run executable file on the server machine
- - Shutsdown a the remote server machine
- - Terminate or kill a process on the server machine
- - Execute remote command on the server machine
- - Open a url on default browser of the server machine
+ - The client can launch/run executable file and also system programs on the server machine
+ - Client can shutdown, restart, hybernate or logoff the remote server machine
+ - Client can terminate or kill a process on the server machine
+ - Client can execute remote commands on the server machine
+ - Client can open a url on default browser of the server machine
 
 #### - OS SUPPORTED
  - Windows 8,10,11
@@ -60,6 +66,10 @@ SystemRun gRPC is a GO unary gRPC that allows you exexcute command and control y
 	}
 	log.Printf("%v", executeShutdown)
 ```
-###
+### ShutdownSytem Supported Commands
+- shutdown
+- restart
+- hibernate
+- loggof
 
 
