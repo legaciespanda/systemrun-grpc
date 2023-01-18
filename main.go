@@ -8,6 +8,7 @@ package main
 import (
 	"log"
 	"net"
+	"runtime"
 
 	fn "github.com/legaciespanda/systemrun-grpc/function"
 	pb "github.com/legaciespanda/systemrun-grpc/pb"
@@ -19,6 +20,12 @@ const (
 )
 
 func main() {
+
+	//SystemRun only runs on windows machine
+	if runtime.GOOS != "windows" {
+		panic("SystemRun Error -):  Only windows Operating System is supported for now")
+	}
+
 	listen, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalf("Failed to startserver %v", err)
